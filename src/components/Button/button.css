@@ -1,0 +1,62 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+
+button:active {
+  transform: scale(0.92);
+}
+
+.btn-primary {
+  background-color: #67B0D1;
+  border: 0px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+  height: 45px;
+  line-height: 45px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #378eb5;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #5FCD9C;
+  border: 0px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+  height: 45px;
+  line-height: 45px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-success:hover {
+  background-color: #35aa76;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: #E87352;
+  border: 0px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14pt;
+  height: 45px;
+  line-height: 45px;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-danger:hover {
+  background-color: #d2441c;
+  cursor: pointer;
+}
