@@ -4,8 +4,7 @@ button:active {
   transform: scale(0.92);
 }
 
-.btn-primary {
-  background-color: #67B0D1;
+button {
   border: 0px;
   box-sizing: border-box;
   color: #ffffff;
@@ -18,45 +17,38 @@ button:active {
   padding-right: 20px;
 }
 
+.btn-primary {
+  background-color: #256EFF;
+}
+
 .btn-primary:hover {
-  background-color: #378eb5;
+  background-color: #0048d8;
   cursor: pointer;
 }
 
 .btn-success {
-  background-color: #5FCD9C;
-  border: 0px;
-  box-sizing: border-box;
-  color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14pt;
-  height: 45px;
-  line-height: 45px;
-  outline: none;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: #3DDC97;
 }
 
 .btn-success:hover {
-  background-color: #35aa76;
+  background-color: #1fad70;
+  cursor: pointer;
+}
+
+.btn-warning {
+  background-color: #D9F2B4;
+}
+
+.btn-warning:hover {
+  background-color: #C0D99B;
   cursor: pointer;
 }
 
 .btn-danger {
-  background-color: #E87352;
-  border: 0px;
-  box-sizing: border-box;
-  color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14pt;
-  height: 45px;
-  line-height: 45px;
-  outline: none;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: #FF495C;
 }
 
 .btn-danger:hover {
-  background-color: #d2441c;
+  background-color: #E63043;
   cursor: pointer;
 }

@@ -11,9 +11,10 @@ ReactDOM.render(
     <br />
     <Button className='btn-success'>Success</Button>
     <br />
+    <Button className='btn-warning'>Warning</Button>
+    <br />
     <Button className='btn-danger'>Danger</Button>
     <br />
-    <Button className='btn-primary'>Another Primary</Button>
     <Notification message="You've got mail!" />
   </div>,
   app
