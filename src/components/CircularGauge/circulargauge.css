@@ -1,0 +1,12 @@
+svg text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24pt;
+}
+
+.chart-filled {
+	fill: #46237A;
+}
+
+.chart-empty {
+	fill: #dedede;
+}
