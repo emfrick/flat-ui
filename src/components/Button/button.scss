@@ -1,4 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+$primary-color: #67b0d1;
 
 button:active {
   transform: scale(0.92);
@@ -18,7 +20,7 @@ button {
 }
 
 .btn-primary {
-  background-color: #67B0D1;
+  background-color: $primary-color;
 }
 
 .btn-primary:hover, .btn-primary:focus {

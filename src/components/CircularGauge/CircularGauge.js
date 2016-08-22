@@ -1,6 +1,6 @@
 import React from 'react';
 import * as d3 from "d3";
-import './circulargauge.css';
+import './circulargauge.scss';
 
 class CircularGauge extends React.Component {
 
