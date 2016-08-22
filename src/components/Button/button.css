@@ -21,7 +21,7 @@ button {
   background-color: #67B0D1;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus {
   background-color: #378eb5;
   cursor: pointer;
 }
@@ -30,7 +30,7 @@ button {
   background-color: #5FCD9C;
 }
 
-.btn-success:hover {
+.btn-success:hover, .btn-success:focus {
   background-color: #35aa76;
   cursor: pointer;
 }
@@ -39,7 +39,7 @@ button {
   background-color: #D9F2B4;
 }
 
-.btn-warning:hover {
+.btn-warning:hover, .btn-warning:focus {
   background-color: #C0D99B;
   cursor: pointer;
 }
@@ -48,7 +48,7 @@ button {
   background-color: #E87352;
 }
 
-.btn-danger:hover {
+.btn-danger:hover, .btn-danger:focus {
   background-color: #d2441c;
   cursor: pointer;
 }
