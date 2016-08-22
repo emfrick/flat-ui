@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TextField from './components/TextField';
 import Button from './components/Button';
 import CircularGauge from './components/CircularGauge';
 import Notification from './components/Notification';
@@ -8,6 +9,12 @@ let app = document.getElementById('app');
 
 ReactDOM.render(
   <div>
+    <TextField placeholder="Email" />
+    <br />
+    <TextField placeholder="First Name" />
+    <br />
+    <TextField placeholder="Last Name" />
+    <br />
     <Button className='btn-primary'>Primary</Button>
     <br />
     <Button className='btn-success'>Success</Button>
