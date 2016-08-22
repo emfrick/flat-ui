@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 input[type="text"] {
   border-bottom: 2px solid #ddd;
   border-left: 1px solid #ddd;
@@ -17,12 +19,12 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border-bottom: 2px solid #67B0D1;
-  color: #67B0D1;
+  border-bottom: 2px solid $primary-color;
+  color: $primary-color;
   transition: border 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 input::selection {
-  color: #378eb5;
+  color: darken($primary-color, $darken-amount);
   background-color: #ddd;
 }

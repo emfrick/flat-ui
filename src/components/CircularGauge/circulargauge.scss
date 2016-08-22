@@ -1,12 +1,14 @@
+@import '../../styles/variables';
+
 svg text {
   font-family: 'Open Sans', sans-serif;
   font-size: 24pt;
 }
 
 .chart-filled {
-	fill: #46237A;
+	fill: $chart-filled;
 }
 
 .chart-empty {
-	fill: #dedede;
+	fill: $chart-empty;
 }

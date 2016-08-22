@@ -1,6 +1,5 @@
+@import '../../styles/variables';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
-$primary-color: #67b0d1;
 
 button:active {
   transform: scale(0.92);
@@ -24,33 +23,34 @@ button {
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #378eb5;
+  //background-color: #378eb5;
+  background-color: darken($primary-color, $darken-amount);
   cursor: pointer;
 }
 
 .btn-success {
-  background-color: #5FCD9C;
+  background-color: $success-color;
 }
 
 .btn-success:hover, .btn-success:focus {
-  background-color: #35aa76;
+  background-color: darken($success-color, $darken-amount);
   cursor: pointer;
 }
 
 .btn-warning {
-  background-color: #D9F2B4;
+  background-color: $warning-color;
 }
 
 .btn-warning:hover, .btn-warning:focus {
-  background-color: #C0D99B;
+  background-color: darken($warning-color, $darken-amount);
   cursor: pointer;
 }
 
 .btn-danger {
-  background-color: #E87352;
+  background-color: $danger-color;
 }
 
 .btn-danger:hover, .btn-danger:focus {
-  background-color: #d2441c;
+  background-color: darken($danger-color, $darken-amount);;
   cursor: pointer;
 }
