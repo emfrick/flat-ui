@@ -18,20 +18,20 @@ button {
 }
 
 .btn-primary {
-  background-color: #256EFF;
+  background-color: #67B0D1;
 }
 
 .btn-primary:hover {
-  background-color: #0048d8;
+  background-color: #378eb5;
   cursor: pointer;
 }
 
 .btn-success {
-  background-color: #3DDC97;
+  background-color: #5FCD9C;
 }
 
 .btn-success:hover {
-  background-color: #1fad70;
+  background-color: #35aa76;
   cursor: pointer;
 }
 
@@ -45,10 +45,10 @@ button {
 }
 
 .btn-danger {
-  background-color: #FF495C;
+  background-color: #E87352;
 }
 
 .btn-danger:hover {
-  background-color: #E63043;
+  background-color: #d2441c;
   cursor: pointer;
 }
