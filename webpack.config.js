@@ -16,6 +16,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = {
   context: path.join(__dirname, 'src'),
   entry: './index.js',
+  devtool: 'source-map',
   output: {
     path: __dirname,
     filename: 'bundle.js'
