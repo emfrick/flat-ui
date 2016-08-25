@@ -40,7 +40,7 @@ Quis est laboris enim fugiat amet duis velit pariatur dolor. Exercitation occaec
 
 Est incididunt nulla elit eiusmod do dolore cupidatat eiusmod mollit labore ex do aliqua nulla dolor. Consequat ullamco voluptate amet occaecat cillum duis deserunt ex nostrud ad. Culpa irure ea mollit tempor non sint eiusmod dolor ex adipisicing sint. Consequat veniam cupidatat culpa do deserunt et nisi consequat occaecat nostrud elit occaecat. Ea voluptate consectetur fugiat occaecat aliqua in minim ipsum aliquip duis fugiat do velit culpa est. Qui tempor ad officia cupidatat Lorem adipisicing sint duis irure amet commodo est amet aliquip est aute.
     </p>
-    <Notification message="You've got mail!" />
+    <Notification message="A longer notification you received some email" open={true} duration={2} />
   </div>,
   app
 )
