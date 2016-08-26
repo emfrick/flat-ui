@@ -8,6 +8,37 @@ import './styles/base.scss';
 
 let app = document.getElementById('app');
 
+class Test extends React.Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      gauge: {
+        value: 10
+      }
+    }
+
+    setInterval(() => {
+      this.setState({
+        gauge: {
+          value: (Math.ceil(Math.random() * 100))
+        }
+      });
+
+      console.log(this.state.gauge.value);
+    }, 5000);
+  }
+
+  render() {
+    return (
+      <div>
+        <CircularGauge width={200} height={200} value={this.state.gauge.value} />
+      </div>
+    )
+  }
+}
+
 ReactDOM.render(
   <div>
     <TextField placeholder="Email" />
@@ -24,11 +55,7 @@ ReactDOM.render(
     <br />
     <Button className='btn-danger'>Danger</Button>
     <br />
-    <CircularGauge width={200} height={200} value={10} />
-    <CircularGauge width={200} height={200} value={25} />
-    <CircularGauge width={200} height={200} value={50} />
-    <CircularGauge width={200} height={200} value={75} />
-    <CircularGauge width={200} height={200} value={100} />
+    <Test />
     <br />
     <p>
       Here's just a boring plain old paragraph with some text in it

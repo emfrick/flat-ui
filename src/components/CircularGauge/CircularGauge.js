@@ -4,33 +4,53 @@ import './circulargauge.scss';
 
 class CircularGauge extends React.Component {
 
-  percentToDegrees(percent) {
-    var p = percent / 100;
-    return (p * 180) - 90;
+  componentDidMount() {
+    console.log("CircularGauge.componentDidMount()", this._node);
+
+    var degrees = this._percentToDegrees(this.props.value);
+    var radians = this._degreesToRadians(degrees);
+
+    var svg = d3.select(this._node)
+                .append("svg")
+                .attr("width", this.props.width)
+                .attr("height", this.props.height)
+
+    svg.append("g")
+       .attr("transform", "translate(" + this.props.width / 2 + "," + this.props.height / 2 + ")");
+
+    this._redraw(radians);
   }
 
-  degreesToRadians(degrees) {
-    return degrees * (Math.PI / 180);
+  componentDidUpdate() {
+    console.log("CircularGauge.componentDidUpdate()", this._node);
+
+    var degrees = this._percentToDegrees(this.props.value);
+    var radians = this._degreesToRadians(degrees);
+
+    this._redraw(radians);
   }
 
   render() {
 
-    console.log(this.props);
+    return (
+      <div ref={ (c) => this._node = c }></div>
+    );
+  }
 
-    // #46237A
+  _percentToDegrees(percent) {
+    var p = percent / 100;
+    return (p * 180) - 90;
+  }
 
-    var degrees = this.percentToDegrees(this.props.value);
-    var radians = this.degreesToRadians(degrees);
+  _degreesToRadians(degrees) {
+    return degrees * (Math.PI / 180);
+  }
 
-    console.log("Degrees: " + degrees);
-    console.log("Radians:" + radians);
+  _redraw(radians) {
+    console.log("CircularGauge._redraw()", radians);
 
-    var svg = d3.select("body")
-      .append("svg")
-      .attr("width", this.props.width)
-      .attr("height", this.props.height)
-      .append("g")
-      .attr("transform", "translate(" + this.props.width / 2 + "," + this.props.height / 2 + ")");
+    d3.select(this._node).select("g").selectAll("path").remove();
+    d3.select(this._node).select("g").selectAll("text").remove();
 
     var arc1 = d3.arc()
       .innerRadius( (this.props.width / 2) * 0.7)
@@ -46,22 +66,19 @@ class CircularGauge extends React.Component {
       .startAngle(radians)
       .endAngle(Math.PI / 2);
 
-    svg.append("path")
+    d3.select(this._node).select("g").append("path")
       .attr("class", "arc chart-filled")
       .attr("d", arc1);
 
-    svg.append("path")
+    d3.select(this._node).select("g").append("path")
       .attr("class", "arc chart-empty")
       .attr("d", arc2);
 
-    svg.append("text")
+    d3.select(this._node).select("g").append("text")
       .attr("transform", "translate(-30, -5)")
       .text(this.props.value + "%");
-
-    return (
-      <div></div>
-    );
   }
+
 }
 
 export default CircularGauge;
