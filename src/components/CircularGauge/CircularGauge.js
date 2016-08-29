@@ -18,6 +18,13 @@ class CircularGauge extends React.Component {
     svg.append("g")
        .attr("transform", "translate(" + this.props.width / 2 + "," + this.props.height / 2 + ")");
 
+    d3.select(this._node).select("g").append("path")
+      .attr("class", "arc chart-empty");
+
+    d3.select(this._node).select("g").append("path")
+      .attr("class", "arc chart-filled");
+
+
     this._redraw(radians);
   }
 
@@ -49,7 +56,7 @@ class CircularGauge extends React.Component {
   _redraw(radians) {
     console.log("CircularGauge._redraw()", radians);
 
-    d3.select(this._node).select("g").selectAll("path").remove();
+    // d3.select(this._node).select("g").selectAll("path").remove();
     d3.select(this._node).select("g").selectAll("text").remove();
 
     var arc1 = d3.arc()
@@ -63,17 +70,21 @@ class CircularGauge extends React.Component {
       .innerRadius( (this.props.width / 2) * 0.7)
       .outerRadius(this.props.width / 2)
       .padAngle(0.02)
-      .startAngle(radians)
+      .startAngle(- (Math.PI / 2))
       .endAngle(Math.PI / 2);
 
-    d3.select(this._node).select("g").append("path")
-      .attr("class", "arc chart-filled")
-      .attr("d", arc1);
+    var foreground = d3.select(this._node).select("g").select(".chart-filled");
+    var background = d3.select(this._node).select("g").select(".chart-empty");
 
-    d3.select(this._node).select("g").append("path")
-      .attr("class", "arc chart-empty")
-      .attr("d", arc2);
+    foreground.transition()
+              .duration(1200)
+              .attrTween("d", () => {
+                return (d) => {
+                  return arc1.endAngle(d3.interpolate(- (Math.PI / 2), radians)(d))();
+                }
+              });
 
+    d3.select(this._node).select("g").select(".chart-empty").attr("d", arc2);
     d3.select(this._node).select("g").append("text")
       .attr("transform", "translate(-30, -5)")
       .text(this.props.value + "%");
