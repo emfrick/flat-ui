@@ -4,7 +4,6 @@ import TextField from './components/TextField';
 import Button from './components/Button';
 import CircularGauge from './components/CircularGauge';
 import Notification from './components/Notification';
-import Dropdown from './components/Dropdown';
 import './styles/base.scss';
 
 let app = document.getElementById('app');
@@ -41,9 +40,6 @@ class Test extends React.Component {
     return (
       <span>
         <CircularGauge width={200} height={200} value={this.state.gauge.value1} />
-        <CircularGauge width={200} height={200} value={this.state.gauge.value2} />
-        <CircularGauge width={200} height={200} value={this.state.gauge.value3} />
-        <CircularGauge width={200} height={200} value={this.state.gauge.value4} />
       </span>
     )
   }
