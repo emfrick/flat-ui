@@ -1,1 +1,2 @@
-export default from './CircularGauge.js';
+import CircularGauge from './CircularGauge.js';
+export default CircularGauge;

@@ -4,6 +4,7 @@ import TextField from './components/TextField';
 import Button from './components/Button';
 import CircularGauge from './components/CircularGauge';
 import Notification from './components/Notification';
+import Loading from './components/Loading';
 import './styles/base.scss';
 
 let app = document.getElementById('app');
@@ -47,6 +48,7 @@ class Test extends React.Component {
 
 ReactDOM.render(
   <div>
+    <Loading enabled={false} />
     <TextField placeholder="Email" />
     <br />
     <TextField placeholder="First Name" />
